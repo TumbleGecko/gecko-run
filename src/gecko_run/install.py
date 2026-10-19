@@ -58,14 +58,12 @@ def copy_program():
 	COMMAND_LINK.symlink_to(INSTALL_FOLDER / "gecko-run")
 
 
-# kiorc's behaviourOnLaunch=open hands an executable file to its app instead of asking first
 # kbuildsycoca6 refreshes the cache KDE reads default apps from
 def list_registration_commands():
 	return (
 		["update-mime-database", str(MIME_FOLDER)],
 		["update-desktop-database", str(APPLICATIONS_FOLDER)],
 		["xdg-mime", "default", DESKTOP_ID, *content_types.HANDLED_TYPES],
-		["kwriteconfig6", "--file", "kiorc", "--group", "Executable scripts", "--key", "behaviourOnLaunch", "open"],
 		["kbuildsycoca6"],
 	)
 

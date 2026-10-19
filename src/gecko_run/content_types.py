@@ -5,11 +5,8 @@ from pathlib import Path
 
 
 # Canonical shared-mime-info names, since desktops look defaults up by those
+# Linux programs, scripts and AppImages are left to KDE and the AppImage Installer
 HANDLED_TYPES = (
-	"application/x-executable",
-	"text/x-shellscript",
-	"application/vnd.appimage",
-	"application/x-iso9660-appimage",
 	"application/x-msdownload",
 	"application/vnd.microsoft.portable-executable",
 	"application/x-ms-ne-executable",
